@@ -46,9 +46,7 @@ def fetch_data(choice: int) -> str:
     choice (int): The number choice chosen from the menu.
     """
     request = requests.post(
-        f"{list(options.items())[choice - 1][1]}",
-        data={"api_key": API_KEY},
-        timeout=1
+        f"{list(options.items())[choice - 1][1]}", data={"api_key": API_KEY}, timeout=1
     )
     if request.status_code == 200:
         formatted_request = json.dumps(json.loads(request.text), indent=2)
@@ -76,7 +74,7 @@ def main() -> None:
     """
 
     # Print menu options
-    for item in options.items():
+    for item, url in options.items():
         print(f"{list(options.keys()).index(item) + 1}. {item.title()}")
 
     # Take user option choice
