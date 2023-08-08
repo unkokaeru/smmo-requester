@@ -9,7 +9,7 @@ import requests
 
 # API KEY
 API_KEY = (
-    "DUAjalpWHAbk9sxI7f9rOGXw5GI96LK44UsTvvm2Xt5R3JQqEI6Ue33YPpLpkKr43qd7WrbUI9QNfFsP"
+    "" # insert
 )
 
 # IDs, if not known, run and select option 2
